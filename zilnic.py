@@ -1,5 +1,16 @@
+import sys
+import os
 
- 
+def meniu():
+    print('Ce doresti sa faci')
+    alegere = input(str(''))
+    if alegere == "raport" :
+        cauta()
+    if alegere == "quit" :
+       sys.exit
+    else:
+        print('Poti selecta raport sau quit')
+
 def cauta():
  fisier = input("Numele documentului si extensia: ")
  cuvant=input("Ce cuvant cauti: ? ")
@@ -14,6 +25,6 @@ def cauta():
  print(F"Cuvantul " +  str(cuvant), "se repeta de: ")
  print(k, 'ori') 
 
-cauta()
+meniu()
 
 input('Apasa <enter> pt a iesi.')
